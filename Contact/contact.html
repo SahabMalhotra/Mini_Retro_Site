@@ -1,0 +1,86 @@
+<!-- Contact page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <!-- Css file -->
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" href="/Header/header.css" />
+    <link rel="stylesheet" href="/Footer/footer.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <!-- Added a cool animation to the text -->
+    <div class="header">
+      <span class="text">&nbsp;skittles for you&nbsp;</span>
+      <span class="hover-text">&nbsp;fruity candy&nbsp;</span>
+    </div>
+    <!-- Have a contact form with required info  -->
+    <div class="container">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mobile">Mobile Number:</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="contact">
+        <h2>MARS INCORPORATED</h2>
+        <br />
+        <p class="Number">Toll Free Number:</p>
+        <p class="tollfree">(800)9744539</p>
+        <br />
+        <p class="website">Website:</p>
+        <p class="web">SKITTLES.COM</p>
+        <br />
+        <p class="address">Corporate Office Address</p>
+        <p class="add">
+          Mars, Incorporated <br />930W.Evergreen Avenue <br />Chicago, Illinois
+          60642 <br />United States
+        </p>
+      </div>
+      <!-- Presents every mean of contact to the company  -->
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Function to load an HTML file into an element
+      function loadHTML(file, elementId) {
+        fetch(file)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then((html) => {
+            document.getElementById(elementId).innerHTML = html;
+          })
+          .catch((error) => console.error("Error loading HTML:", error));
+      }
+
+      // Load the header and footer
+      loadHTML("/Header/header.html", "header-placeholder");
+      loadHTML("/Footer/footer.html", "footer-placeholder");
+    </script>
+  </body>
+</html>
