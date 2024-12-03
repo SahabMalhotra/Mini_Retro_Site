@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Righteous&display=swap");
+header {
+  background-color: black;
+  padding: 10px 0;
+}
+/*The padding font size and style is specified for all anchor tags used.*/
+header a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+/*The text in the header tag*/
+header a.text {
+  font-family: "Orbitron", sans-serif; /*Font family for the heading*/
+  letter-spacing: 0.4rem; /*Letter spacing so that it will not look congested*/
+  /*So that font will look like a rainbow*/
+  background-image: linear-gradient(
+    to left,
+    #ff5757,
+    #fff100,
+    #15ffe1,
+    #ff0040
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: 7vmin; /* Adjust font size for smaller screens */
+  touch-action: manipulation;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*The menus in header tag
+everything is specified like font style font size and color*/
+header a.menu {
+  font-family: "Righteous", sans-serif;
+  font-style: italic;
+  float: right;
+  letter-spacing: 0.2rem;
+  color: rgb(7, 252, 7);
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+/*Hover effects for menu looks great*/
+header a.menu:hover,
+header a.menu:focus {
+  background-image: linear-gradient(90deg, #ff00d2, #fed90f);
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  color: rgb(237, 240, 240);
+  transition: 0.2s;
+  font-variant: small-caps;
+}
+/*Heart icon in the center of nav bar next to text looks cute*/
+header a.heart {
+  margin-left: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: red;
+  font-size: 6vmin; /* Adjust font size for smaller screens */
+  position: relative;
+  display: inline; /* Ensure the container only takes the width of the heart */
+  touch-action: manipulation;
+}
+/*Hover effect for heart icon*/
+header a.heart:hover {
+  text-shadow: 0 0 10px red;
+}

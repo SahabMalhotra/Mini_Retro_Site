@@ -1,0 +1,50 @@
+footer {
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* Ensure the footer is above other elements */
+}
+/*Copyright line in footer*/
+footer p {
+  margin: 0;
+}
+/*For container for icons*/
+.icons {
+  display: flex; /* Convert container to flexbox */
+  flex-direction: row; /* Arrange icons horizontally */
+  justify-content: center; /* Center icons horizontally */
+  flex-wrap: wrap; /* Wrap icons to next row */
+}
+
+.icons img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  margin: 5px; /* Adjust the margin as needed for spacing between icons */
+  background-color: white;
+  border-radius: 40px;
+}
+
+.facebook:hover {
+  background-color: blue;
+}
+
+.instagram:hover {
+  background-color: #ff1515;
+}
+
+.linkedin:hover {
+  background-color: #155bff;
+}
+
+.messenger:hover {
+  background-color: #1596ff;
+}
+.pinterest:hover {
+  background-color: #ff1515;
+}
+.whatsapp:hover {
+  background-color: #15ff1d;
+}
